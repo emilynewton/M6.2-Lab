@@ -1,79 +1,37 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fancy letterheaded paper</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <img src="img/top-image.png"> 
+    <article>
+      <h1>Awesome<br>Company</h1>
 
-<head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
-</head>
+      <address>
+        <p>The Awesome Company</p>
+        
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit, nisl ac lobortis condimentum, urna ante viverra dolor, in consequat nisi erat sed nulla. Sed ac lorem diam. Nunc ullamcorper mauris quis ipsum tristique, a maximus sem mollis. Maecenas sit amet massa at nibh rutrum euismod. Nunc semper justo turpis, ac consequat eros iaculis ac. Donec ultrices lacus vel consequat mattis. Integer lacinia id ligula sit amet varius.
 
-<body>
-  <h1>HTML Rocks!</h1>
-  <p>
-    <button  onclick="helloWorld()">Prints Hello World to the Developer console</button>
-  </p>
-  <hr>
-  <form id="addForm">
-    <label for="num1">Number 1:</label>
-    <input type="number" id="num1" name="num1" required>
-    <br>
-    <label for="num2">Number 2:</label>
-    <input type="number" id="num2" name="num2" required>
-    <br>
-    <button type="submit">Add Numbers</button>
-  </form>
+Maecenas vitae sapien commodo, venenatis ante nec, scelerisque massa. Phasellus eget magna ultricies, euismod urna sit amet, convallis diam. Nam eu venenatis risus. Pellentesque ut erat euismod, porta turpis vitae, tempus mi. Mauris venenatis velit id vestibulum tempus. Proin ac leo nec sem semper rhoncus. Quisque vestibulum quis metus id suscipit. Vestibulum ultricies est vulputate tristique fermentum. Integer lacinia augue sed ligula viverra eleifend. In neque sapien, varius ac dictum ut, malesuada id urna. Aenean consectetur neque nulla, vitae gravida nibh sagittis quis. Cras ullamcorper lectus eget luctus sagittis. Phasellus in ipsum erat. Sed interdum tellus in sapien convallis aliquam. Fusce orci dolor, sodales id justo nec, convallis pharetra nisl. Morbi et mi ut ligula placerat maximus.
 
-  <label id="result">Result:</label>
+Quisque tristique massa at neque imperdiet, eu aliquam nulla ultrices. Aliquam pellentesque lacus aliquam suscipit bibendum. Suspendisse eu est maximus, facilisis felis non, pellentesque velit. Praesent vel commodo velit. Sed eu posuere quam. Mauris non metus viverra, suscipit ligula ut, mattis metus. Nunc feugiat felis id leo porttitor, quis iaculis sem fringilla. Aenean lobortis feugiat leo, nec pretium purus egestas vitae. Vestibulum et magna at nulla eleifend sagittis.
 
-  <hr>
+Cras vitae nulla sed mauris posuere tincidunt. Morbi vehicula augue ac arcu condimentum, id viverra nisi suscipit. Morbi at egestas elit. Duis id ante vel orci porta aliquet. Suspendisse hendrerit vulputate ipsum, eu ullamcorper diam egestas vestibulum. Quisque porta orci et dolor aliquet pellentesque. Phasellus varius maximus sem vitae hendrerit. Donec vitae tristique justo, at placerat mi.
 
-  <button id="jokeButton">Get a Random Joke</button>
-  <p id="joke"></p>
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis convallis interdum ipsum, eu laoreet eros auctor at. Etiam nec mauris enim. Sed vehicula mauris eget vehicula euismod. Sed scelerisque a neque sit amet consectetur. Nam sed dolor nulla. In ullamcorper, sapien vel auctor gravida, sapien erat scelerisque magna, sit amet dignissim neque dui id massa. Morbi ut arcu ac sapien tempor tempus. Phasellus metus dui, pellentesque euismod tellus eget, tempus auctor eros.
 
-  <script type="module" script="js/main.js">
-    import {helloWorld, add, fetchRandomJoke} from './js/main.js';
-
-    // This shows how to assign a function to the window object
-    // so that it can be called from the browser console
-    window.helloWorld = helloWorld;
-
-    // This shows how to add an event listener to a button in the HTML
-    // and call a function when the button is clicked
-    const form = document.getElementById('addForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      try{
-        const result = add(num1, num2);
-        document.getElementById('result').textContent = `Result: ${result}`;
-      }catch(e){
-        console.error(e);
-        document.getElementById('result').textContent = `Error: ${e.message}`;
-      }
-
-    });
-
-    // this shows how to add an event listener to a button in the HTML
-    // that calls a function that fetches a random joke from an API
-    // and displays it on the page
-    const jokebtn = document.getElementById('jokeButton');
-    const jokeresult = document.getElementById('joke');
-    jokebtn.addEventListener('click', async () => {
-      try {
-        jokeresult.textContent = 'Loading...';
-        const joke = await fetchRandomJoke();
-        document.getElementById('joke').textContent = joke;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('joke').textContent = `Error: ${e.message}`;
-      }
-    });
-  </script>
-
-</body>
-
+Ut condimentum, magna ac egestas eleifend, arcu tellus ullamcorper tortor, ac vestibulum nisi ex sit amet urna. Integer sed urna gravida, faucibus lorem vel, viverra orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris mattis accumsan mi, id tempus ex hendrerit id. Vestibulum quis ligula nec erat vestibulum convallis varius non ligula. Cras dictum vulputate mattis. Sed ut tellus vel justo fermentum lobortis ac id magna. Phasellus bibendum at justo eu volutpat. Aenean congue molestie velit, at ultrices nulla auctor quis. Morbi dictum efficitur nunc quis eleifend. Proin ullamcorper eleifend massa id vestibulum. Suspendisse ornare tempor augue in tristique. Etiam euismod eu urna ut dictum.  
+        <p>102-112 Frail Bend Bridge<br>
+        The Dwindlings<br>
+        Little Hornet<br>
+        HX3 9ZQ<br>
+        UK</p>
+      </address>
+    </article>
+    <img src="img/bottom-image.png">
+  </body>
 </html>
