@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <img src="img/top-image.png"> 
-    
       <h1>Awesome<br>Company</h1>
       <article>
       <div class="row">
@@ -34,19 +32,34 @@
         </div>
       </div>
 
+      <script type="module">
+        import {alertFromRadio} from './js/main.js'; 
+        window.alertFromRadio = alertFromRadio; 
+
+        document.addEventListener('DOMContentLoaded', () => {
+          const radioButtons = document.querySelectorAll('input[name="items"]');
+          radioButtons.forEach(radio => {
+            radio.addEventListener('change', () => {
+              const selectedValue = alertFromRadio(radioButtons); 
+              
+            });
+          });
+        });
+      
+      </script>
       <form>
         Pick one: 
+        <br>
+        <input type="radio" name="items" value="Stan">Stan
         <br>
         <input type="radio" name="items" value="Kyle">Kyle
         <br>
         <input type="radio" name="items" value="Cartman">Cartman
         <br>
-        <input type="radio" name="items" value="Stan">Stan
-        <br>
         <input type="radio" name="items" value="Kenny">Kenny
         <br>
-        <button onclick="helloWorld()" value="Submit">Submit</button>
       </form>
+      <button onclick="alert(alertFromRadio(document.querySelectorAll('input[name=\'items\']')))">Submit</button>
       <address>
         <p>The Awesome Company</p>
         <p>102-112 Frail Bend Bridge<br>
@@ -56,6 +69,5 @@
         UK</p>
       </address>
     </article>
-    <img src="img/bottom-image.png">
   </body>
 </html>

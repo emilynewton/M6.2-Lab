@@ -9,11 +9,7 @@
 /**
  * This function alerts whatever value was selected from the radio checkbox. 
  */
-  export function alertFromRadio() {
-    const selectedValue = document.querySelector('input[name="items"]:checked'); 
-    alert(selectedValue); 
-  }
-
-  export function helloWorld() {
-    alert('Hello World!'); 
+  export function alertFromRadio(radioList) {
+    const selectedValue = Array.from(radioList).find(radio => radio.checked); 
+    return selectedValue.value; 
   }
