@@ -23,7 +23,8 @@ you do not need to setup a local server to run the project.
 ## Testing
 
 To run the tests for the project, run the following command:
-
 ```bash
 npm test
 ```
+
+There is only one test to test that the alert function works properly. 
